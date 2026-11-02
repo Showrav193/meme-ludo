@@ -71,7 +71,7 @@ io.on('connection', (socket) => {
 });
 
 // ============================================================================
-// 3. ULTRA-REALISTIC 3D TABLETOP FRONTEND (WITH PAUSE, SOLO/TEAM WIN & NEW MATCH)
+// 3. ULTRA-REALISTIC 3D TABLETOP FRONTEND
 // ============================================================================
 const GAME_HTML = `<!DOCTYPE html>
 <html lang="bn">
@@ -228,7 +228,6 @@ const GAME_HTML = `<!DOCTYPE html>
     }
     .chat-bubble.pop { transform: scale(1); }
 
-    /* REALISTIC MAHOGANY & BRASS WOODEN BOARD CASING */
     .board-casing {
         position: relative;
         padding: 20px;
@@ -307,7 +306,6 @@ const GAME_HTML = `<!DOCTYPE html>
     }
     .center-meme-popup.show { transform: translate(-50%, -50%) scale(1) rotate(-2deg); }
 
-    /* PAUSE OVERLAY & GAME OVER VICTORY MODAL */
     .board-overlay {
         position: absolute;
         inset: 20px;
@@ -419,7 +417,6 @@ const GAME_HTML = `<!DOCTYPE html>
         align-items: center;
     }
 
-    /* TRUE 3D TUMBLING DICE TRAY */
     .dice-row {
         display: flex;
         align-items: center;
@@ -885,78 +882,18 @@ function playRealisticFoley(type) {
 }
 
 const VIRAL_MEMES = {
-    kill1: {
-        banner: "💀 হালার পুত সোজা বাড়িত যা!",
-        speech: "হালার পুত, সোজা বাড়িত যা! টাটা বাই বাই!",
-        stinger: "vineboom",
-        emojis: "💀🔥⚰️"
-    },
-    kill2: {
-        banner: "🔥 ধরে ভরে দিছি রে! গুটি শেষ!",
-        speech: "ধরে ভরে দিছি রে! তোর গুটি একেবারে শেষ!",
-        stinger: "coffin",
-        emojis: "🔥😈💀"
-    },
-    kill3: {
-        banner: "😂 ওমা গো! কী সুন্দর গুটি খাইলাম!",
-        speech: "ওমা গো! কী সুন্দর গুটি খাইয়া দিলাম রে!",
-        stinger: "laugh",
-        emojis: "😂🤣👻"
-    },
-    six1: {
-        banner: "🚀 খেলা হবে! মামা ছক্কা মাইরা দে!",
-        speech: "খেলা হবে! মামা ছক্কা মাইরা ভরে দে!",
-        stinger: "airhorn",
-        emojis: "🚀🎲🔥"
-    },
-    six2: {
-        banner: "👑 খানকির পোলার কপাল দেখ! ছক্কা!",
-        speech: "খানকির পোলার কপাল দেখ! আবার ছক্কা মারছে!",
-        stinger: "airhorn",
-        emojis: "👑⚡🎲"
-    },
-    one1: {
-        banner: "😭 হোগা মারা সারা! আবার ১!",
-        speech: "হোগা মারা সারা! শালা আবার এক উঠছে রে!",
-        stinger: "violin",
-        emojis: "😭🐸💔"
-    },
-    one2: {
-        banner: "🐸 ধূর বাল! কপালটাই কুত্তার!",
-        speech: "ধূর বাল! এই কপাল নিয়া লুডু খেলতে আসছিস?",
-        stinger: "trombone",
-        emojis: "🐸🤡💩"
-    },
-    trap1: {
-        banner: "😈 আয় শালার পুত সামনে আয়!",
-        speech: "আয় শালার পুত সামনে আয়, তোর যম দাঁড়ায় আছে!",
-        stinger: "vineboom",
-        emojis: "😈🔪👀"
-    },
-    taunt1: {
-        banner: "🤡 কান্দিস না বাচ্চা পোলা, আব্বু ডাক দে!",
-        speech: "কান্দিস না বাচ্চা পোলা, টিস্যু নে, আব্বু ডাক দে!",
-        stinger: "laugh",
-        emojis: "🤡🍼😂"
-    },
-    taunt2: {
-        banner: "👀 এতগুলা গুটি খাইয়া লজ্জা করে না?",
-        speech: "এতগুলা গুটি খাইয়া একটুও লজ্জা করে না তোর?",
-        stinger: "vineboom",
-        emojis: "👀🤦‍♂️🔥"
-    },
-    home1: {
-        banner: "🏆 তোর আব্বা আসছি রে! মুই বস্!",
-        speech: "তোর আব্বা আসছি রে! মুই বস্, তোদের খেলা শেষ!",
-        stinger: "fanfare",
-        emojis: "🏆👑🎉"
-    },
-    pen1: {
-        banner: "🤯 তিনবার ছক্কা! চাল বাতিল!",
-        speech: "শালা তিনবার ছক্কা মাইরা চালই বাতিল করে দিলি!",
-        stinger: "trombone",
-        emojis: "🤯🚫😭"
-    }
+    kill1: { banner: "💀 হালার পুত সোজা বাড়িত যা!", speech: "হালার পুত, সোজা বাড়িত যা! টাটা বাই বাই!", stinger: "vineboom", emojis: "💀🔥⚰️" },
+    kill2: { banner: "🔥 ধরে ভরে দিছি রে! গুটি শেষ!", speech: "ধরে ভরে দিছি রে! তোর গুটি একেবারে শেষ!", stinger: "coffin", emojis: "🔥😈💀" },
+    kill3: { banner: "😂 ওমা গো! কী সুন্দর গুটি খাইলাম!", speech: "ওমা গো! কী সুন্দর গুটি খাইয়া দিলাম রে!", stinger: "laugh", emojis: "😂🤣👻" },
+    six1: { banner: "🚀 খেলা হবে! মামা ছক্কা মাইরা দে!", speech: "খেলা হবে! মামা ছক্কা মাইরা ভরে দে!", stinger: "airhorn", emojis: "🚀🎲🔥" },
+    six2: { banner: "👑 খানকির পোলার কপাল দেখ! ছক্কা!", speech: "খানকির পোলার কপাল দেখ! আবার ছক্কা মারছে!", stinger: "airhorn", emojis: "👑⚡🎲" },
+    one1: { banner: "😭 হোগা মারা সারা! আবার ১!", speech: "হোগা মারা সারা! শালা আবার এক উঠছে রে!", stinger: "violin", emojis: "😭🐸💔" },
+    one2: { banner: "🐸 ধূর বাল! কপালটাই কুত্তার!", speech: "ধূর বাল! এই কপাল নিয়া লুডু খেলতে আসছিস?", stinger: "trombone", emojis: "🐸🤡💩" },
+    trap1: { banner: "😈 আয় শালার পুত সামনে আয়!", speech: "আয় শালার পুত সামনে আয়, তোর যম দাঁড়ায় আছে!", stinger: "vineboom", emojis: "😈🔪👀" },
+    taunt1: { banner: "🤡 কান্দিস না বাচ্চা পোলা, আব্বু ডাক দে!", speech: "কান্দিস না বাচ্চা পোলা, টিস্যু নে, আব্বু ডাক দে!", stinger: "laugh", emojis: "🤡🍼😂" },
+    taunt2: { banner: "👀 এতগুলা গুটি খাইয়া লজ্জা করে না?", speech: "এতগুলা গুটি খাইয়া একটুও লজ্জা করে না তোর?", stinger: "vineboom", emojis: "👀🤦‍♂️🔥" },
+    home1: { banner: "🏆 তোর আব্বা আসছি রে! মুই বস্!", speech: "তোর আব্বা আসছি রে! মুই বস্, তোদের খেলা শেষ!", stinger: "fanfare", emojis: "🏆👑🎉" },
+    pen1: { banner: "🤯 তিনবার ছক্কা! চাল বাতিল!", speech: "শালা তিনবার ছক্কা মাইরা চালই বাতিল করে দিলি!", stinger: "trombone", emojis: "🤯🚫😭" }
 };
 
 function playViralStinger(stingerType) {
@@ -1150,15 +1087,6 @@ function playViralMemePack(memeKey, speakerPlayerIdx = 0, isOpponent = false) {
     } catch (e) {}
 }
 
-function triggerViralMeme(key) {
-    if (isPaused || isGameOver) return;
-    const curP = activePlayers[turnIndex];
-    playViralMemePack(key, curP, false);
-    if (gameMode === 'ONLINE' && currentRoomCode) {
-        socket.emit('sendTaunt', { roomCode: currentRoomCode, key, speaker: localPlayerIndex });
-    }
-}
-
 const canvas = document.getElementById('ludoCanvas');
 const ctx = canvas.getContext('2d');
 const TILE = 40;
@@ -1171,18 +1099,10 @@ const PALETTE = [
 ];
 
 const MAIN_PATH = [
-    [6,1],[6,2],[6,3],[6,4],[6,5],
-    [5,6],[4,6],[3,6],[2,6],[1,6],[0,6],
-    [0,7],
-    [0,8],[1,8],[2,8],[3,8],[4,8],[5,8],
-    [6,9],[6,10],[6,11],[6,12],[6,13],[6,14],
-    [7,14],
-    [8,14],[8,13],[8,12],[8,11],[8,10],[8,9],
-    [9,8],[10,8],[11,8],[12,8],[13,8],[14,8],
-    [14,7],
-    [14,6],[13,6],[12,6],[11,6],[10,6],[9,6],
-    [8,5],[8,4],[8,3],[8,2],[8,1],[8,0],
-    [7,0],[6,0]
+    [6,1],[6,2],[6,3],[6,4],[6,5],[5,6],[4,6],[3,6],[2,6],[1,6],[0,6],[0,7],
+    [0,8],[1,8],[2,8],[3,8],[4,8],[5,8],[6,9],[6,10],[6,11],[6,12],[6,13],[6,14],[7,14],
+    [8,14],[8,13],[8,12],[8,11],[8,10],[8,9],[9,8],[10,8],[11,8],[12,8],[13,8],[14,8],[14,7],
+    [14,6],[13,6],[12,6],[11,6],[10,6],[9,6],[8,5],[8,4],[8,3],[8,2],[8,1],[8,0],[7,0],[6,0]
 ];
 
 const START_OFFSETS = [0, 13, 26, 39];
@@ -1212,17 +1132,15 @@ let sixCount = 0;
 let turnTimerPct = 100;
 let hoveredPawn = null;
 
-// Pause & Match Completion States
 let isPaused = false;
 let isGameOver = false;
-let finishedOrder = []; // Stores player indices in the order they finish all 4 tokens
+let finishedOrder = [];
 
 let tokens = [];
 let particles = [];
 let shockwaves = [];
 let floatingEmojis = [];
 
-// Team Helper: Team A = Red(0) & Yellow(2), Team B = Green(1) & Blue(3)
 function areTeammates(p1, p2) {
     if (gameMode !== 'TEAM') return false;
     return (p1 % 2) === (p2 % 2);
@@ -1238,15 +1156,7 @@ function initTokens() {
         for (let id = 0; id < 4; id++) {
             const [r, c] = BASE_SPOTS[p][id];
             tokens.push({
-                player: p,
-                id,
-                step: -1,
-                visR: r,
-                visC: c,
-                jumpH: 0,
-                scaleX: 1,
-                scaleY: 1,
-                rotAngle: 0
+                player: p, id, step: -1, visR: r, visC: c, jumpH: 0, scaleX: 1, scaleY: 1, rotAngle: 0
             });
         }
     }
@@ -1269,7 +1179,6 @@ function initTokens() {
     refreshHUD();
 }
 
-// Toggle Pause / Resume
 function togglePauseGame(fromNet = false) {
     if (isGameOver) return;
     isPaused = !isPaused;
@@ -1277,13 +1186,12 @@ function togglePauseGame(fromNet = false) {
     document.getElementById('pauseBtn').innerText = isPaused ? '▶️ RESUME (P)' : '⏸️ PAUSE (P)';
     document.getElementById('sidePauseBtn').innerText = isPaused ? '▶️ Resume Match' : '⏸️ Pause Match';
 
-    if (!fromNet && gameMode === 'ONLINE' && currentRoomCode) {
+    if (!fromNet && gameMode === 'ONLINE' && currentRoomCode && socket) {
         socket.emit('onlinePause', { roomCode: currentRoomCode, isPaused });
     }
 
     refreshHUD();
 
-    // If unpaused during Bot's turn, resume Bot action
     if (!isPaused && gameMode === 'BOT' && activePlayers[turnIndex] !== 0 && !isAnimating) {
         if (!waitingForMove) {
             setTimeout(() => { if (!isPaused && !isGameOver) runDiceAnimation(Math.floor(Math.random() * 6) + 1); }, 500);
@@ -1291,9 +1199,8 @@ function togglePauseGame(fromNet = false) {
     }
 }
 
-// Start a Fresh New Match
 function startNewMatch(fromNet = false) {
-    if (!fromNet && gameMode === 'ONLINE' && currentRoomCode) {
+    if (!fromNet && gameMode === 'ONLINE' && currentRoomCode && socket) {
         socket.emit('onlineNewMatch', { roomCode: currentRoomCode });
     }
     initTokens();
@@ -1301,143 +1208,69 @@ function startNewMatch(fromNet = false) {
 
 function getStepRC(player, step, id = 0) {
     if (step === -1) return BASE_SPOTS[player][id];
-    if (step <= 50) {
-        const idx = (START_OFFSETS[player] + step) % 52;
-        return MAIN_PATH[idx];
-    }
+    if (step <= 50) return MAIN_PATH[(START_OFFSETS[player] + step) % 52];
     return HOME_PATHS[player][Math.min(5, step - 51)];
 }
 
-function getLogicalRC(tk) {
-    return getStepRC(tk.player, tk.step, tk.id);
-}
+function getLogicalRC(tk) { return getStepRC(tk.player, tk.step, tk.id); }
 
 function drawBeveledTile(r, c, fillStyle, isRecessed = false) {
-    const x = c * TILE;
-    const y = r * TILE;
+    const x = c * TILE, y = r * TILE;
     ctx.fillStyle = fillStyle;
     ctx.fillRect(x, y, TILE, TILE);
 
     ctx.strokeStyle = isRecessed ? 'rgba(0,0,0,0.22)' : 'rgba(255,255,255,0.65)';
     ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.moveTo(x + 1, y + TILE - 1);
-    ctx.lineTo(x + 1, y + 1);
-    ctx.lineTo(x + TILE - 1, y + 1);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x + 1, y + TILE - 1); ctx.lineTo(x + 1, y + 1); ctx.lineTo(x + TILE - 1, y + 1); ctx.stroke();
 
     ctx.strokeStyle = 'rgba(120, 53, 15, 0.35)';
-    ctx.beginPath();
-    ctx.moveTo(x + TILE - 1, y + 1);
-    ctx.lineTo(x + TILE - 1, y + TILE - 1);
-    ctx.lineTo(x + 1, y + TILE - 1);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x + TILE - 1, y + 1); ctx.lineTo(x + TILE - 1, y + TILE - 1); ctx.lineTo(x + 1, y + TILE - 1); ctx.stroke();
 }
 
 function drawRealistic3DPawn(x, y, pal, tk, isSelectable, pulse, stackCount) {
     ctx.save();
     const jumpH = tk.jumpH || 0;
+    const shadowOffset = 4 + jumpH * 0.28, shadowScale = Math.max(0.4, 1 - jumpH * 0.014);
 
-    const shadowOffset = 4 + jumpH * 0.28;
-    const shadowScale = Math.max(0.4, 1 - jumpH * 0.014);
-    ctx.beginPath();
-    ctx.ellipse(x + shadowOffset * 0.65, y + 7 + shadowOffset * 0.35, 13 * shadowScale, 6.5 * shadowScale, 0, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.52)';
-    ctx.fill();
+    ctx.beginPath(); ctx.ellipse(x + shadowOffset * 0.65, y + 7 + shadowOffset * 0.35, 13 * shadowScale, 6.5 * shadowScale, 0, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.52)'; ctx.fill();
 
     if (isSelectable) {
-        const rad = 17 + Math.sin(pulse * 7) * 3.5;
-        ctx.beginPath();
-        ctx.arc(x, y + 3, rad, 0, Math.PI * 2);
-        ctx.strokeStyle = '#fde047';
-        ctx.lineWidth = 3.5;
-        ctx.stroke();
+        ctx.beginPath(); ctx.arc(x, y + 3, 17 + Math.sin(pulse * 7) * 3.5, 0, Math.PI * 2);
+        ctx.strokeStyle = '#fde047'; ctx.lineWidth = 3.5; ctx.stroke();
     }
 
-    const py = y - jumpH;
-    ctx.translate(x, py);
+    ctx.translate(x, y - jumpH);
     if (tk.rotAngle) ctx.rotate(tk.rotAngle);
     ctx.scale(tk.scaleX || 1, tk.scaleY || 1);
 
     const baseGrad = ctx.createLinearGradient(-12, 0, 12, 0);
-    baseGrad.addColorStop(0, '#92400e');
-    baseGrad.addColorStop(0.5, '#fef08a');
-    baseGrad.addColorStop(1, '#78350f');
-    ctx.beginPath();
-    ctx.ellipse(0, 5, 12, 5.8, 0, 0, Math.PI * 2);
-    ctx.fillStyle = baseGrad;
-    ctx.fill();
-    ctx.lineWidth = 1.5;
-    ctx.strokeStyle = '#451a03';
-    ctx.stroke();
+    baseGrad.addColorStop(0, '#92400e'); baseGrad.addColorStop(0.5, '#fef08a'); baseGrad.addColorStop(1, '#78350f');
+    ctx.beginPath(); ctx.ellipse(0, 5, 12, 5.8, 0, 0, Math.PI * 2);
+    ctx.fillStyle = baseGrad; ctx.fill(); ctx.lineWidth = 1.5; ctx.strokeStyle = '#451a03'; ctx.stroke();
 
     const bodyGrad = ctx.createLinearGradient(-10, -15, 10, 5);
-    bodyGrad.addColorStop(0, pal.light);
-    bodyGrad.addColorStop(0.45, pal.main);
-    bodyGrad.addColorStop(1, pal.dark);
+    bodyGrad.addColorStop(0, pal.light); bodyGrad.addColorStop(0.45, pal.main); bodyGrad.addColorStop(1, pal.dark);
+    ctx.beginPath(); ctx.moveTo(-9.8, 4); ctx.quadraticCurveTo(-6, -8, -4.2, -12.5); ctx.lineTo(4.2, -12.5); ctx.quadraticCurveTo(6, -8, 9.8, 4); ctx.closePath();
+    ctx.fillStyle = bodyGrad; ctx.fill(); ctx.lineWidth = 1.4; ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.stroke();
 
-    ctx.beginPath();
-    ctx.moveTo(-9.8, 4);
-    ctx.quadraticCurveTo(-6, -8, -4.2, -12.5);
-    ctx.lineTo(4.2, -12.5);
-    ctx.quadraticCurveTo(6, -8, 9.8, 4);
-    ctx.closePath();
-    ctx.fillStyle = bodyGrad;
-    ctx.fill();
-    ctx.lineWidth = 1.4;
-    ctx.strokeStyle = 'rgba(255,255,255,0.85)';
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(-4.5, 2); ctx.quadraticCurveTo(-3, -6, -2, -11);
+    ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 2.2; ctx.lineCap = 'round'; ctx.stroke();
 
-    ctx.beginPath();
-    ctx.moveTo(-4.5, 2);
-    ctx.quadraticCurveTo(-3, -6, -2, -11);
-    ctx.strokeStyle = 'rgba(255,255,255,0.55)';
-    ctx.lineWidth = 2.2;
-    ctx.lineCap = 'round';
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.ellipse(0, -12, 5.5, 2.3, 0, 0, Math.PI * 2);
-    ctx.fillStyle = '#fde047';
-    ctx.fill();
-    ctx.strokeStyle = '#78350f';
-    ctx.lineWidth = 1;
-    ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(0, -12, 5.5, 2.3, 0, 0, Math.PI * 2);
+    ctx.fillStyle = '#fde047'; ctx.fill(); ctx.strokeStyle = '#78350f'; ctx.lineWidth = 1; ctx.stroke();
 
     const headGrad = ctx.createRadialGradient(-3.2, -19.5, 1.2, 0, -16.5, 8.8);
-    headGrad.addColorStop(0, '#ffffff');
-    headGrad.addColorStop(0.3, pal.light);
-    headGrad.addColorStop(0.75, pal.main);
-    headGrad.addColorStop(1, pal.dark);
-
-    ctx.beginPath();
-    ctx.arc(0, -16.5, 7.8, 0, Math.PI * 2);
-    ctx.fillStyle = headGrad;
-    ctx.fill();
-    ctx.lineWidth = 1.4;
-    ctx.strokeStyle = 'rgba(255,255,255,0.9)';
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.arc(-2.8, -19.2, 2.1, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(255,255,255,0.92)';
-    ctx.fill();
+    headGrad.addColorStop(0, '#ffffff'); headGrad.addColorStop(0.3, pal.light); headGrad.addColorStop(0.75, pal.main); headGrad.addColorStop(1, pal.dark);
+    ctx.beginPath(); ctx.arc(0, -16.5, 7.8, 0, Math.PI * 2);
+    ctx.fillStyle = headGrad; ctx.fill(); ctx.lineWidth = 1.4; ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.stroke();
+    ctx.beginPath(); ctx.arc(-2.8, -19.2, 2.1, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255,255,255,0.92)'; ctx.fill();
 
     if (stackCount > 1) {
-        ctx.fillStyle = '#090414';
-        ctx.beginPath();
-        ctx.arc(10, -22, 8.5, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.strokeStyle = '#fde047';
-        ctx.lineWidth = 1.6;
-        ctx.stroke();
-        ctx.fillStyle = '#fde047';
-        ctx.font = 'bold 10px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText('x' + stackCount, 10, -22);
+        ctx.fillStyle = '#090414'; ctx.beginPath(); ctx.arc(10, -22, 8.5, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = '#fde047'; ctx.lineWidth = 1.6; ctx.stroke();
+        ctx.fillStyle = '#fde047'; ctx.font = 'bold 10px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('x' + stackCount, 10, -22);
     }
-
     ctx.restore();
 }
 
@@ -1446,27 +1279,19 @@ function renderGameCanvas(ts) {
     ctx.clearRect(0, 0, 600, 600);
 
     for (let r = 0; r < 15; r++) {
-        for (let c = 0; c < 15; c++) {
-            const shade = (r + c) % 2 === 0 ? '#fdfbf7' : '#f5efe6';
-            drawBeveledTile(r, c, shade);
-        }
+        for (let c = 0; c < 15; c++) { drawBeveledTile(r, c, (r + c) % 2 === 0 ? '#fdfbf7' : '#f5efe6'); }
     }
 
     HOME_PATHS.forEach((path, pIdx) => {
         for (let i = 0; i < 5; i++) {
             const [r, c] = path[i];
             drawBeveledTile(r, c, PALETTE[pIdx].main, true);
-            ctx.fillStyle = 'rgba(255,255,255,0.22)';
-            ctx.fillRect(c * TILE + 6, r * TILE + 6, TILE - 12, TILE - 12);
+            ctx.fillStyle = 'rgba(255,255,255,0.22)'; ctx.fillRect(c * TILE + 6, r * TILE + 6, TILE - 12, TILE - 12);
         }
     });
 
-    const entryArrows = [[7,0,'▶',0], [0,7,'▼',1], [7,14,'◀',2], [14,7,'▲',3]];
-    entryArrows.forEach(([r, c, sym, pIdx]) => {
-        ctx.fillStyle = PALETTE[pIdx].main;
-        ctx.font = 'bold 18px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
+    [[7,0,'▶',0], [0,7,'▼',1], [7,14,'◀',2], [14,7,'▲',3]].forEach(([r, c, sym, pIdx]) => {
+        ctx.fillStyle = PALETTE[pIdx].main; ctx.font = 'bold 18px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
         ctx.fillText(sym, c * TILE + TILE / 2, r * TILE + TILE / 2);
     });
 
@@ -1475,82 +1300,38 @@ function renderGameCanvas(ts) {
         const starter = START_OFFSETS.indexOf(idx);
         drawBeveledTile(r, c, starter !== -1 ? PALETTE[starter].main : '#e2e8f0', true);
 
-        const cx = c * TILE + TILE / 2;
-        const cy = r * TILE + TILE / 2;
-        ctx.beginPath();
-        ctx.arc(cx, cy, 14, 0, Math.PI * 2);
-        ctx.fillStyle = starter !== -1 ? 'rgba(0,0,0,0.22)' : 'rgba(15,23,42,0.12)';
-        ctx.fill();
-        ctx.strokeStyle = '#fbbf24';
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-
-        ctx.fillStyle = starter !== -1 ? '#fde047' : '#b45309';
-        ctx.font = 'bold 19px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText('★', cx, cy + 1);
+        const cx = c * TILE + TILE / 2, cy = r * TILE + TILE / 2;
+        ctx.beginPath(); ctx.arc(cx, cy, 14, 0, Math.PI * 2); ctx.fillStyle = starter !== -1 ? 'rgba(0,0,0,0.22)' : 'rgba(15,23,42,0.12)'; ctx.fill();
+        ctx.strokeStyle = '#fbbf24'; ctx.lineWidth = 1.5; ctx.stroke();
+        ctx.fillStyle = starter !== -1 ? '#fde047' : '#b45309'; ctx.font = 'bold 19px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('★', cx, cy + 1);
     });
 
     [[0,0,0], [0,9,1], [9,9,2], [9,0,3]].forEach(([r, c, pIdx]) => {
         const pal = PALETTE[pIdx];
         const g = ctx.createLinearGradient(c * TILE, r * TILE, (c + 6) * TILE, (r + 6) * TILE);
-        g.addColorStop(0, pal.main);
-        g.addColorStop(1, pal.dark);
-        ctx.fillStyle = g;
-        ctx.fillRect(c * TILE, r * TILE, 6 * TILE, 6 * TILE);
-
-        ctx.fillStyle = '#faf5eb';
-        ctx.fillRect((c + 0.85) * TILE, (r + 0.85) * TILE, 4.3 * TILE, 4.3 * TILE);
-        ctx.strokeStyle = '#b45309';
-        ctx.lineWidth = 3.5;
-        ctx.strokeRect((c + 0.85) * TILE, (r + 0.85) * TILE, 4.3 * TILE, 4.3 * TILE);
+        g.addColorStop(0, pal.main); g.addColorStop(1, pal.dark);
+        ctx.fillStyle = g; ctx.fillRect(c * TILE, r * TILE, 6 * TILE, 6 * TILE);
+        ctx.fillStyle = '#faf5eb'; ctx.fillRect((c + 0.85) * TILE, (r + 0.85) * TILE, 4.3 * TILE, 4.3 * TILE);
+        ctx.strokeStyle = '#b45309'; ctx.lineWidth = 3.5; ctx.strokeRect((c + 0.85) * TILE, (r + 0.85) * TILE, 4.3 * TILE, 4.3 * TILE);
 
         BASE_SPOTS[pIdx].forEach(([sr, sc]) => {
-            const sx = (sc + 0.5) * TILE;
-            const sy = (sr + 0.5) * TILE;
+            const sx = (sc + 0.5) * TILE, sy = (sr + 0.5) * TILE;
             const radGrad = ctx.createRadialGradient(sx - 3, sy - 3, 2, sx, sy, 16);
-            radGrad.addColorStop(0, pal.light);
-            radGrad.addColorStop(0.7, pal.main);
-            radGrad.addColorStop(1, pal.dark);
-
-            ctx.beginPath();
-            ctx.arc(sx, sy, 16, 0, Math.PI * 2);
-            ctx.fillStyle = radGrad;
-            ctx.fill();
-            ctx.lineWidth = 2.5;
-            ctx.strokeStyle = '#fbbf24';
-            ctx.stroke();
+            radGrad.addColorStop(0, pal.light); radGrad.addColorStop(0.7, pal.main); radGrad.addColorStop(1, pal.dark);
+            ctx.beginPath(); ctx.arc(sx, sy, 16, 0, Math.PI * 2); ctx.fillStyle = radGrad; ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = '#fbbf24'; ctx.stroke();
         });
     });
 
     const cx = 7.5 * TILE, cy = 7.5 * TILE;
     [
-        [[6*TILE,6*TILE],[6*TILE,9*TILE],[cx,cy], 0],
-        [[6*TILE,6*TILE],[9*TILE,6*TILE],[cx,cy], 1],
-        [[9*TILE,6*TILE],[9*TILE,9*TILE],[cx,cy], 2],
-        [[6*TILE,9*TILE],[9*TILE,9*TILE],[cx,cy], 3]
+        [[6*TILE,6*TILE],[6*TILE,9*TILE],[cx,cy], 0], [[6*TILE,6*TILE],[9*TILE,6*TILE],[cx,cy], 1],
+        [[9*TILE,6*TILE],[9*TILE,9*TILE],[cx,cy], 2], [[6*TILE,9*TILE],[9*TILE,9*TILE],[cx,cy], 3]
     ].forEach(([p1, p2, p3, idx]) => {
-        ctx.beginPath();
-        ctx.moveTo(p1[0], p1[1]); ctx.lineTo(p2[0], p2[1]); ctx.lineTo(p3[0], p3[1]);
-        ctx.closePath();
-        ctx.fillStyle = PALETTE[idx].main;
-        ctx.fill();
-        ctx.lineWidth = 2.2;
-        ctx.strokeStyle = '#fbbf24';
-        ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(p1[0], p1[1]); ctx.lineTo(p2[0], p2[1]); ctx.lineTo(p3[0], p3[1]); ctx.closePath();
+        ctx.fillStyle = PALETTE[idx].main; ctx.fill(); ctx.lineWidth = 2.2; ctx.strokeStyle = '#fbbf24'; ctx.stroke();
     });
-    ctx.beginPath();
-    ctx.arc(cx, cy, 20, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(9, 4, 20, 0.78)';
-    ctx.fill();
-    ctx.strokeStyle = '#fde047';
-    ctx.lineWidth = 2.5;
-    ctx.stroke();
-    ctx.font = '24px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText('👑', cx, cy + 1);
+    ctx.beginPath(); ctx.arc(cx, cy, 20, 0, Math.PI * 2); ctx.fillStyle = 'rgba(9, 4, 20, 0.78)'; ctx.fill();
+    ctx.strokeStyle = '#fde047'; ctx.lineWidth = 2.5; ctx.stroke(); ctx.font = '24px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('👑', cx, cy + 1);
 
     if (!isPaused && !isGameOver && waitingForMove && hoveredPawn && canPawnMove(hoveredPawn, currentDice)) {
         drawMoveTrajectoryPreview(hoveredPawn, currentDice, pulse);
@@ -1558,65 +1339,40 @@ function renderGameCanvas(ts) {
 
     for (let i = shockwaves.length - 1; i >= 0; i--) {
         const sw = shockwaves[i];
-        sw.r += sw.speed || 3.5;
-        sw.alpha -= 0.04;
+        sw.r += sw.speed || 3.5; sw.alpha -= 0.04;
         if (sw.alpha <= 0) { shockwaves.splice(i, 1); continue; }
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(sw.x, sw.y, sw.r, 0, Math.PI * 2);
-        ctx.strokeStyle = sw.color;
-        ctx.globalAlpha = sw.alpha;
-        ctx.lineWidth = sw.lw || 3.5;
-        ctx.stroke();
-        ctx.restore();
+        ctx.save(); ctx.beginPath(); ctx.arc(sw.x, sw.y, sw.r, 0, Math.PI * 2); ctx.strokeStyle = sw.color; ctx.globalAlpha = sw.alpha; ctx.lineWidth = sw.lw || 3.5; ctx.stroke(); ctx.restore();
     }
 
     const curP = activePlayers[turnIndex];
-    const visTokens = tokens.filter(t => activePlayers.includes(t.player));
-    visTokens.sort((a, b) => a.visR - b.visR);
+    const visTokens = tokens.filter(t => activePlayers.includes(t.player)).sort((a, b) => a.visR - b.visR);
 
     visTokens.forEach(tk => {
         const group = visTokens.filter(o => o.player === tk.player && o.step === tk.step && o.step !== -1 && Math.abs(o.visR - tk.visR) < 0.1);
         const idx = group.indexOf(tk);
         const offset = group.length > 1 ? (idx - (group.length - 1) / 2) * 6 : 0;
-
-        const x = (tk.visC + 0.5) * TILE + offset;
-        const y = (tk.visR + 0.5) * TILE;
+        const x = (tk.visC + 0.5) * TILE + offset, y = (tk.visR + 0.5) * TILE;
         const selectable = !isPaused && !isGameOver && waitingForMove && tk.player === curP && canPawnMove(tk, currentDice);
-        const badgeCount = (group.length > 1 && idx === group.length - 1) ? group.length : 1;
-
-        drawRealistic3DPawn(x, y, PALETTE[tk.player], tk, selectable, pulse, badgeCount);
+        drawRealistic3DPawn(x, y, PALETTE[tk.player], tk, selectable, pulse, group.length > 1 && idx === group.length - 1 ? group.length : 1);
     });
 
     for (let i = particles.length - 1; i >= 0; i--) {
         const pt = particles[i];
         pt.x += pt.vx; pt.y += pt.vy; pt.vy += 0.25; pt.life -= 0.024;
         if (pt.life <= 0) { particles.splice(i, 1); continue; }
-        ctx.save();
-        ctx.globalAlpha = pt.life;
-        ctx.fillStyle = pt.color;
-        ctx.beginPath();
-        ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
+        ctx.save(); ctx.globalAlpha = pt.life; ctx.fillStyle = pt.color; ctx.beginPath(); ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2); ctx.fill(); ctx.restore();
     }
 
     for (let i = floatingEmojis.length - 1; i >= 0; i--) {
         const fe = floatingEmojis[i];
         fe.y -= 2.3; fe.life -= 0.018;
         if (fe.life <= 0) { floatingEmojis.splice(i, 1); continue; }
-        ctx.save();
-        ctx.globalAlpha = Math.min(1, fe.life * 1.5);
-        ctx.font = '34px sans-serif';
-        ctx.fillText(fe.ch, fe.x, fe.y);
-        ctx.restore();
+        ctx.save(); ctx.globalAlpha = Math.min(1, fe.life * 1.5); ctx.font = '34px sans-serif'; ctx.fillText(fe.ch, fe.x, fe.y); ctx.restore();
     }
 
     const vig = ctx.createRadialGradient(300, 300, 180, 300, 300, 430);
-    vig.addColorStop(0, 'rgba(255,255,255,0.04)');
-    vig.addColorStop(1, 'rgba(0,0,0,0.28)');
-    ctx.fillStyle = vig;
-    ctx.fillRect(0, 0, 600, 600);
+    vig.addColorStop(0, 'rgba(255,255,255,0.04)'); vig.addColorStop(1, 'rgba(0,0,0,0.28)');
+    ctx.fillStyle = vig; ctx.fillRect(0, 0, 600, 600);
 
     requestAnimationFrame(renderGameCanvas);
 }
@@ -1624,42 +1380,26 @@ function renderGameCanvas(ts) {
 function drawMoveTrajectoryPreview(tk, dice, pulse) {
     ctx.save();
     const stepsToPreview = [];
-    if (tk.step === -1 && dice === 6) {
-        stepsToPreview.push(0);
-    } else {
-        for (let s = 1; s <= dice; s++) stepsToPreview.push(tk.step + s);
-    }
+    if (tk.step === -1 && dice === 6) stepsToPreview.push(0);
+    else for (let s = 1; s <= dice; s++) stepsToPreview.push(tk.step + s);
 
     stepsToPreview.forEach((st, idx) => {
         const [r, c] = getStepRC(tk.player, st, tk.id);
-        const cx = (c + 0.5) * TILE;
-        const cy = (r + 0.5) * TILE;
-        const isFinal = (idx === stepsToPreview.length - 1);
+        const cx = (c + 0.5) * TILE, cy = (r + 0.5) * TILE, isFinal = (idx === stepsToPreview.length - 1);
 
-        ctx.beginPath();
-        ctx.arc(cx, cy, isFinal ? 15 + Math.sin(pulse * 10) * 2.5 : 6, 0, Math.PI * 2);
+        ctx.beginPath(); ctx.arc(cx, cy, isFinal ? 15 + Math.sin(pulse * 10) * 2.5 : 6, 0, Math.PI * 2);
         if (isFinal) {
-            ctx.fillStyle = 'rgba(250, 204, 21, 0.35)';
-            ctx.fill();
-            ctx.lineWidth = 3;
-            ctx.strokeStyle = '#fde047';
-            ctx.stroke();
-
+            ctx.fillStyle = 'rgba(250, 204, 21, 0.35)'; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = '#fde047'; ctx.stroke();
             if (st >= 0 && st <= 50) {
                 const gIdx = (START_OFFSETS[tk.player] + st) % 52;
                 if (!SAFE_INDICES.has(gIdx)) {
-                    const hasVictim = tokens.some(o => o.player !== tk.player && !areTeammates(o.player, tk.player) && o.step >= 0 && o.step <= 50 && ((START_OFFSETS[o.player] + o.step) % 52) === gIdx);
-                    if (hasVictim) {
-                        ctx.fillStyle = '#dc2626';
-                        ctx.font = 'bold 12px sans-serif';
-                        ctx.textAlign = 'center';
-                        ctx.fillText('🎯 KILL!', cx, cy - 22);
+                    if (tokens.some(o => o.player !== tk.player && !areTeammates(o.player, tk.player) && o.step >= 0 && o.step <= 50 && ((START_OFFSETS[o.player] + o.step) % 52) === gIdx)) {
+                        ctx.fillStyle = '#dc2626'; ctx.font = 'bold 12px sans-serif'; ctx.textAlign = 'center'; ctx.fillText('🎯 KILL!', cx, cy - 22);
                     }
                 }
             }
         } else {
-            ctx.fillStyle = 'rgba(250, 204, 21, 0.75)';
-            ctx.fill();
+            ctx.fillStyle = 'rgba(250, 204, 21, 0.75)'; ctx.fill();
         }
     });
     ctx.restore();
@@ -1668,61 +1408,27 @@ function drawMoveTrajectoryPreview(tk, dice, pulse) {
 function triggerKillFX(x, y, color) {
     shockwaves.push({ x, y, r: 8, alpha: 1.0, color: '#fde047', speed: 4.2, lw: 4.5 });
     for (let i = 0; i < 42; i++) {
-        const a = Math.random() * Math.PI * 2;
-        const s = 2 + Math.random() * 7.5;
-        particles.push({
-            x, y,
-            vx: Math.cos(a) * s,
-            vy: Math.sin(a) * s - 3,
-            size: 3 + Math.random() * 4.5,
-            color: i % 2 === 0 ? color : '#fde047',
-            life: 1.0
-        });
+        const a = Math.random() * Math.PI * 2, s = 2 + Math.random() * 7.5;
+        particles.push({ x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s - 3, size: 3 + Math.random() * 4.5, color: i % 2 === 0 ? color : '#fde047', life: 1.0 });
     }
     const casing = document.getElementById('boardCasing');
-    const flash = document.getElementById('killFlash');
-    casing.classList.remove('shake');
-    void casing.offsetWidth;
-    casing.classList.add('shake');
-    flash.classList.add('active');
-    setTimeout(() => flash.classList.remove('active'), 350);
+    casing.classList.remove('shake'); void casing.offsetWidth; casing.classList.add('shake');
+    const flash = document.getElementById('killFlash'); flash.classList.add('active'); setTimeout(() => flash.classList.remove('active'), 350);
 }
 
 function spawnEmojiBurst(str) {
     const arr = Array.from(str || '🔥');
-    for (let i = 0; i < 6; i++) {
-        floatingEmojis.push({
-            x: 110 + Math.random() * 380,
-            y: 490 + Math.random() * 60,
-            ch: arr[i % arr.length],
-            life: 1.0
-        });
-    }
+    for (let i = 0; i < 6; i++) floatingEmojis.push({ x: 110 + Math.random() * 380, y: 490 + Math.random() * 60, ch: arr[i % arr.length], life: 1.0 });
 }
 
-const CUBE_FACE_ROTATIONS = {
-    1: { x: 0,   y: 0 },
-    2: { x: 0,   y: -180 },
-    3: { x: 0,   y: -90 },
-    4: { x: 0,   y: 90 },
-    5: { x: -90, y: 0 },
-    6: { x: 90,  y: 0 }
-};
-
-let spinCountX = 0;
-let spinCountY = 0;
-
+const CUBE_FACE_ROTATIONS = { 1: {x:0,y:0}, 2: {x:0,y:-180}, 3: {x:0,y:-90}, 4: {x:0,y:90}, 5: {x:-90,y:0}, 6: {x:90,y:0} };
+let spinCountX = 0, spinCountY = 0;
 function set3DCubeRotation(val, tumble = false) {
     const cube = document.getElementById('cube3D');
     if (!cube) return;
-    if (tumble) {
-        spinCountX += 2;
-        spinCountY += 2;
-    }
+    if (tumble) { spinCountX += 2; spinCountY += 2; }
     const target = CUBE_FACE_ROTATIONS[val] || CUBE_FACE_ROTATIONS[1];
-    const rx = target.x + spinCountX * 360;
-    const ry = target.y + spinCountY * 360;
-    cube.style.transform = 'translateZ(-34px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+    cube.style.transform = 'translateZ(-34px) rotateX(' + (target.x + spinCountX * 360) + 'deg) rotateY(' + (target.y + spinCountY * 360) + 'deg)';
 }
 
 function canPawnMove(tk, dice) {
@@ -1741,61 +1447,41 @@ function isMyTurn() {
 
 function triggerRoll() {
     if (isPaused || isGameOver || waitingForMove || isAnimating || !isMyTurn()) return;
-    if (gameMode === 'ONLINE') {
+    if (gameMode === 'ONLINE' && socket) {
         socket.emit('onlineRoll', { roomCode: currentRoomCode, playerIndex: localPlayerIndex });
     } else {
-        const val = Math.floor(Math.random() * 6) + 1;
-        runDiceAnimation(val);
+        runDiceAnimation(Math.floor(Math.random() * 6) + 1);
     }
 }
 
 function runDiceAnimation(finalVal) {
     if (isPaused || isGameOver) return;
-    isAnimating = true;
-    hoveredPawn = null;
+    isAnimating = true; hoveredPawn = null;
     playRealisticFoley('dice_tumble');
     set3DCubeRotation(finalVal, true);
-
-    setTimeout(() => {
-        isAnimating = false;
-        if (!isPaused && !isGameOver) handleDiceOutcome(finalVal);
-    }, 560);
+    setTimeout(() => { isAnimating = false; if (!isPaused && !isGameOver) handleDiceOutcome(finalVal); }, 560);
 }
 
-function pickRandomKey(keys) {
-    return keys[Math.floor(Math.random() * keys.length)];
-}
+function pickRandomKey(keys) { return keys[Math.floor(Math.random() * keys.length)]; }
 
 function handleDiceOutcome(val) {
     if (isPaused || isGameOver) return;
     currentDice = val;
-    const curP = activePlayers[turnIndex];
-    const isOpp = !isMyTurn();
+    const curP = activePlayers[turnIndex], isOpp = !isMyTurn();
 
     if (val === 6) {
         sixCount++;
-        if (sixCount >= 3) {
-            playViralMemePack('pen1', curP, isOpp);
-            sixCount = 0;
-            setTimeout(() => nextPlayerTurn(), 1100);
-            return;
-        }
+        if (sixCount >= 3) { playViralMemePack('pen1', curP, isOpp); sixCount = 0; setTimeout(() => nextPlayerTurn(), 1100); return; }
         playViralMemePack(pickRandomKey(['six1', 'six2']), curP, isOpp);
     } else {
         sixCount = 0;
-        if (val === 1) {
-            playViralMemePack(pickRandomKey(['one1', 'one2']), curP, isOpp);
-        }
+        if (val === 1) playViralMemePack(pickRandomKey(['one1', 'one2']), curP, isOpp);
     }
 
     const movables = tokens.filter(t => t.player === curP && canPawnMove(t, val));
-    if (movables.length === 0) {
-        setTimeout(() => nextPlayerTurn(), 850);
-        return;
-    }
+    if (movables.length === 0) { setTimeout(() => nextPlayerTurn(), 850); return; }
 
     waitingForMove = true;
-
     if (gameMode === 'BOT' && curP !== 0) {
         setTimeout(() => {
             if (isPaused || isGameOver) return;
@@ -1803,8 +1489,7 @@ function handleDiceOutcome(val) {
             for (const m of movables) {
                 if (m.step >= 0 && (m.step + val) <= 50) {
                     const gIdx = (START_OFFSETS[m.player] + m.step + val) % 52;
-                    const kills = tokens.some(o => o.player !== m.player && !areTeammates(o.player, m.player) && o.step >= 0 && o.step <= 50 && ((START_OFFSETS[o.player] + o.step) % 52) === gIdx);
-                    if (kills) { chosen = m; break; }
+                    if (tokens.some(o => o.player !== m.player && !areTeammates(o.player, m.player) && o.step >= 0 && o.step <= 50 && ((START_OFFSETS[o.player] + o.step) % 52) === gIdx)) { chosen = m; break; }
                 }
                 if (m.step === -1 && val === 6) chosen = m;
             }
@@ -1817,66 +1502,38 @@ function handleDiceOutcome(val) {
 
 function movePawnAnimated(tk, steps) {
     if (isPaused || isGameOver) return;
-    waitingForMove = false;
-    hoveredPawn = null;
-    isAnimating = true;
+    waitingForMove = false; hoveredPawn = null; isAnimating = true;
     const isOpp = !isMyTurn();
 
     if (tk.step === -1 && steps === 6) {
         tk.step = 0;
-        const [tr, tc] = getLogicalRC(tk);
-        hopTileRealistic(tk, tr, tc, () => evaluatePostMove(tk, steps, isOpp));
+        hopTileRealistic(tk, getLogicalRC(tk)[0], getLogicalRC(tk)[1], () => evaluatePostMove(tk, steps, isOpp));
         return;
     }
 
     let rem = steps;
     function stepNext() {
-        if (rem <= 0) {
-            evaluatePostMove(tk, steps, isOpp);
-            return;
-        }
-        tk.step++;
-        rem--;
-        const [tr, tc] = getLogicalRC(tk);
-        hopTileRealistic(tk, tr, tc, stepNext);
+        if (rem <= 0) { evaluatePostMove(tk, steps, isOpp); return; }
+        tk.step++; rem--;
+        hopTileRealistic(tk, getLogicalRC(tk)[0], getLogicalRC(tk)[1], stepNext);
     }
     stepNext();
 }
 
 function hopTileRealistic(tk, tr, tc, cb) {
-    const sr = tk.visR, sc = tk.visC;
-    const dur = 165;
-    const t0 = performance.now();
-
+    const sr = tk.visR, sc = tk.visC, dur = 165, t0 = performance.now();
     function frame(now) {
         const p = Math.min(1, (now - t0) / dur);
-        tk.visR = sr + (tr - sr) * p;
-        tk.visC = sc + (tc - sc) * p;
-        tk.jumpH = Math.sin(p * Math.PI) * 21;
+        tk.visR = sr + (tr - sr) * p; tk.visC = sc + (tc - sc) * p; tk.jumpH = Math.sin(p * Math.PI) * 21;
 
-        if (p < 0.2) {
-            tk.scaleX = 1.15; tk.scaleY = 0.85;
-        } else if (p < 0.8) {
-            tk.scaleX = 0.92; tk.scaleY = 1.12;
-        } else {
-            tk.scaleX = 1.18; tk.scaleY = 0.82;
-        }
+        if (p < 0.2) { tk.scaleX = 1.15; tk.scaleY = 0.85; }
+        else if (p < 0.8) { tk.scaleX = 0.92; tk.scaleY = 1.12; }
+        else { tk.scaleX = 1.18; tk.scaleY = 0.82; }
 
-        if (p < 1) {
-            requestAnimationFrame(frame);
-        } else {
-            tk.visR = tr; tk.visC = tc; tk.jumpH = 0;
-            tk.scaleX = 1; tk.scaleY = 1;
+        if (p < 1) { requestAnimationFrame(frame); } else {
+            tk.visR = tr; tk.visC = tc; tk.jumpH = 0; tk.scaleX = 1; tk.scaleY = 1;
             playRealisticFoley('wood_step');
-            shockwaves.push({
-                x: (tc + 0.5) * TILE,
-                y: (tr + 0.5) * TILE + 4,
-                r: 4,
-                alpha: 0.45,
-                color: '#d97706',
-                speed: 1.5,
-                lw: 2
-            });
+            shockwaves.push({ x: (tc + 0.5) * TILE, y: (tr + 0.5) * TILE + 4, r: 4, alpha: 0.45, color: '#d97706', speed: 1.5, lw: 2 });
             cb();
         }
     }
@@ -1884,155 +1541,89 @@ function hopTileRealistic(tk, tr, tc, cb) {
 }
 
 function animateKilledPawnKnockback(victimTk) {
-    const sr = victimTk.visR, sc = victimTk.visC;
-    const [br, bc] = BASE_SPOTS[victimTk.player][victimTk.id];
+    const sr = victimTk.visR, sc = victimTk.visC, [br, bc] = BASE_SPOTS[victimTk.player][victimTk.id];
     victimTk.step = -1;
-    const dur = 520;
-    const t0 = performance.now();
-
+    const dur = 520, t0 = performance.now();
     function knockFrame(now) {
         const p = Math.min(1, (now - t0) / dur);
-        victimTk.visR = sr + (br - sr) * p;
-        victimTk.visC = sc + (bc - sc) * p;
-        victimTk.jumpH = Math.sin(p * Math.PI) * 75;
-        victimTk.rotAngle = p * Math.PI * 4;
-        if (p < 1) {
-            requestAnimationFrame(knockFrame);
-        } else {
-            victimTk.visR = br;
-            victimTk.visC = bc;
-            victimTk.jumpH = 0;
-            victimTk.rotAngle = 0;
-            playRealisticFoley('wood_step');
+        victimTk.visR = sr + (br - sr) * p; victimTk.visC = sc + (bc - sc) * p;
+        victimTk.jumpH = Math.sin(p * Math.PI) * 75; victimTk.rotAngle = p * Math.PI * 4;
+        if (p < 1) requestAnimationFrame(knockFrame); else {
+            victimTk.visR = br; victimTk.visC = bc; victimTk.jumpH = 0; victimTk.rotAngle = 0; playRealisticFoley('wood_step');
         }
     }
     requestAnimationFrame(knockFrame);
 }
 
-// Check Solo & Team Match Completion Rules
 function checkMatchFinishConditions(lastPlayer) {
-    // Record player if they just finished all 4 tokens
-    if (isPlayerFinished(lastPlayer) && !finishedOrder.includes(lastPlayer)) {
-        finishedOrder.push(lastPlayer);
-    }
+    if (isPlayerFinished(lastPlayer) && !finishedOrder.includes(lastPlayer)) finishedOrder.push(lastPlayer);
 
-    // 1. TEAM MODE RULE: Team A = Red(0)+Yellow(2), Team B = Green(1)+Blue(3)
     if (gameMode === 'TEAM') {
         const teamAWon = isPlayerFinished(0) && isPlayerFinished(2);
         const teamBWon = isPlayerFinished(1) && isPlayerFinished(3);
-
         if (teamAWon || teamBWon) {
             isGameOver = true;
-            const winTeamName = teamAWon ? '🏆 TEAM A (RED & YELLOW) WINS!' : '🏆 TEAM B (GREEN & BLUE) WINS!';
-            const loseTeamName = teamAWon ? '💀 Team B (Green & Blue)' : '💀 Team A (Red & Yellow)';
-            showVictoryModal(winTeamName, 'টিমের ২ জন প্লেয়ারই সব গুটি ঘরে তুলে বাজিমাত করেছে!', [
+            showVictoryModal(teamAWon ? '🏆 TEAM A WINS!' : '🏆 TEAM B WINS!', 'টিমের ২ জন প্লেয়ারই সব গুটি ঘরে তুলে বাজিমাত করেছে!', [
                 { label: '🥇 WINNER TEAM', name: teamAWon ? 'RED & YELLOW' : 'GREEN & BLUE' },
-                { label: '🤡 DEFEATED TEAM', name: loseTeamName }
+                { label: '🤡 DEFEATED TEAM', name: teamAWon ? 'Team B (Green & Blue)' : 'Team A (Red & Yellow)' }
             ]);
             return true;
         }
         return false;
     }
 
-    // 2. SOLO MODE RULE: Finish when (activePlayers.length - 1) players have finished!
     if (finishedOrder.length >= activePlayers.length - 1) {
         isGameOver = true;
-        const remainingLoser = activePlayers.find(p => !finishedOrder.includes(p));
         const medals = ['🥇 1ST PLACE', '🥈 2ND PLACE', '🥉 3RD PLACE'];
-        const rows = finishedOrder.map((pIdx, idx) => ({
-            label: medals[idx] || ('RANK #' + (idx + 1)),
-            name: PALETTE[pIdx].name + ' KING'
-        }));
-        if (remainingLoser !== undefined) {
-            rows.push({
-                label: '🤡 LAST / LOSER',
-                name: PALETTE[remainingLoser].name + ' (হোগা মারা সারা!)'
-            });
-        }
-        const winnerName = PALETTE[finishedOrder[0]].name;
-        showVictoryModal('👑 ' + winnerName + ' WINS THE MATCH!', 'শেষ প্লেয়ার বাদে বাকি সবাই জিতে যাওয়ায় খেলা সমাপ্ত!', rows);
+        const rows = finishedOrder.map((pIdx, idx) => ({ label: medals[idx] || ('RANK #' + (idx + 1)), name: PALETTE[pIdx].name + ' KING' }));
+        const remainingLoser = activePlayers.find(p => !finishedOrder.includes(p));
+        if (remainingLoser !== undefined) rows.push({ label: '🤡 LAST / LOSER', name: PALETTE[remainingLoser].name + ' (হোগা মারা সারা!)' });
+        showVictoryModal('👑 ' + PALETTE[finishedOrder[0]].name + ' WINS!', 'শেষ প্লেয়ার বাদে বাকি সবাই জিতে যাওয়ায় খেলা সমাপ্ত!', rows);
         return true;
     }
-
     return false;
 }
 
 function showVictoryModal(title, subtitle, podiumRows) {
-    document.getElementById('winTitle').innerText = title;
-    document.getElementById('winSubtitle').innerText = subtitle;
-    const list = document.getElementById('podiumList');
-    list.innerHTML = podiumRows.map(r =>
-        '<div class="podium-item"><span>' + r.label + '</span><span style="color:#fde047;">' + r.name + '</span></div>'
-    ).join('');
-    document.getElementById('gameOverOverlay').classList.add('show');
-    refreshHUD();
+    document.getElementById('winTitle').innerText = title; document.getElementById('winSubtitle').innerText = subtitle;
+    document.getElementById('podiumList').innerHTML = podiumRows.map(r => '<div class="podium-item"><span>' + r.label + '</span><span style="color:#fde047;">' + r.name + '</span></div>').join('');
+    document.getElementById('gameOverOverlay').classList.add('show'); refreshHUD();
 }
 
 function evaluatePostMove(tk, steps, isOpp) {
-    isAnimating = false;
-    let bonus = (steps === 6);
-
+    isAnimating = false; let bonus = (steps === 6);
     if (tk.step >= 0 && tk.step <= 50) {
         const gIdx = (START_OFFSETS[tk.player] + tk.step) % 52;
         if (!SAFE_INDICES.has(gIdx)) {
             tokens.forEach(other => {
-                // In Team mode, teammates don't kill each other!
-                if (other.player !== tk.player && !areTeammates(other.player, tk.player) && other.step >= 0 && other.step <= 50) {
-                    const ogIdx = (START_OFFSETS[other.player] + other.step) % 52;
-                    if (ogIdx === gIdx) {
-                        const kx = (tk.visC + 0.5) * TILE;
-                        const ky = (tk.visR + 0.5) * TILE;
-                        triggerKillFX(kx, ky, PALETTE[other.player].main);
-                        playViralMemePack(pickRandomKey(['kill1', 'kill2', 'kill3']), tk.player, isOpp);
-                        animateKilledPawnKnockback(other);
-                        bonus = true;
-                    }
+                if (other.player !== tk.player && !areTeammates(other.player, tk.player) && other.step >= 0 && other.step <= 50 && ((START_OFFSETS[other.player] + other.step) % 52) === gIdx) {
+                    triggerKillFX((tk.visC + 0.5) * TILE, (tk.visR + 0.5) * TILE, PALETTE[other.player].main);
+                    playViralMemePack(pickRandomKey(['kill1', 'kill2', 'kill3']), tk.player, isOpp);
+                    animateKilledPawnKnockback(other); bonus = true;
                 }
             });
         }
     }
-
-    if (tk.step === 56) {
-        bonus = true;
-        playViralMemePack('home1', tk.player, isOpp);
-    }
-
-    // Check if Solo or Team Match is Finished!
-    if (checkMatchFinishConditions(tk.player)) {
-        return;
-    }
+    if (tk.step === 56) { bonus = true; playViralMemePack('home1', tk.player, isOpp); }
+    if (checkMatchFinishConditions(tk.player)) return;
 
     refreshHUD();
-
-    // If current player just finished all 4 tokens, pass turn to next unfinished player
-    if (isPlayerFinished(tk.player)) {
-        nextPlayerTurn();
-        return;
-    }
+    if (isPlayerFinished(tk.player)) { nextPlayerTurn(); return; }
 
     if (bonus) {
         turnTimerPct = 100;
-        if (gameMode === 'BOT' && activePlayers[turnIndex] !== 0) {
-            setTimeout(() => { if (!isPaused && !isGameOver) runDiceAnimation(Math.floor(Math.random() * 6) + 1); }, 750);
-        }
-    } else {
-        nextPlayerTurn();
-    }
+        if (gameMode === 'BOT' && activePlayers[turnIndex] !== 0) setTimeout(() => { if (!isPaused && !isGameOver) runDiceAnimation(Math.floor(Math.random() * 6) + 1); }, 750);
+    } else { nextPlayerTurn(); }
 }
 
 function nextPlayerTurn() {
     if (isGameOver) return;
-    sixCount = 0;
-    turnTimerPct = 100;
-
-    // Advance to next active player who hasn't finished all 4 tokens yet
+    sixCount = 0; turnTimerPct = 100;
     for (let i = 0; i < activePlayers.length; i++) {
         turnIndex = (turnIndex + 1) % activePlayers.length;
         if (!isPlayerFinished(activePlayers[turnIndex])) break;
     }
-
     refreshHUD();
-
     if (!isPaused && !isGameOver && gameMode === 'BOT' && activePlayers[turnIndex] !== 0) {
         setTimeout(() => { if (!isPaused && !isGameOver) runDiceAnimation(Math.floor(Math.random() * 6) + 1); }, 650);
     }
@@ -2041,34 +1632,18 @@ function nextPlayerTurn() {
 function refreshHUD() {
     const curP = activePlayers[turnIndex];
     for (let i = 0; i < 4; i++) {
-        const hud = document.getElementById('hud-' + i);
-        const st = document.getElementById('status-' + i);
-        const sc = document.getElementById('score-' + i);
-        const ttag = document.getElementById('ttag-' + i);
-
-        const homeCount = tokens.filter(t => t.player === i && t.step === 56).length;
-        const done = homeCount === 4;
+        const hud = document.getElementById('hud-' + i), st = document.getElementById('status-' + i), sc = document.getElementById('score-' + i), ttag = document.getElementById('ttag-' + i);
+        const homeCount = tokens.filter(t => t.player === i && t.step === 56).length, done = homeCount === 4;
         if (sc) sc.innerText = done ? '✅ FINISHED' : (homeCount + '/4 Home');
         if (ttag) ttag.style.display = gameMode === 'TEAM' ? 'inline-block' : 'none';
-
         hud.style.display = activePlayers.includes(i) ? 'flex' : 'none';
-        hud.classList.toggle('active', !isGameOver && i === curP);
-        hud.classList.toggle('finished-player', done);
-
+        hud.classList.toggle('active', !isGameOver && i === curP); hud.classList.toggle('finished-player', done);
         if (st) {
-            if (done) {
-                const rankIdx = finishedOrder.indexOf(i);
-                st.innerText = '🏆 Rank #' + (rankIdx + 1) + ' Complete!';
-            } else if (isPaused) {
-                st.innerText = '⏸️ Game Paused';
-            } else {
-                st.innerText = i === curP ? '🎲 Active Turn' : 'Waiting...';
-            }
+            if (done) st.innerText = '🏆 Rank #' + (finishedOrder.indexOf(i) + 1) + ' Complete!';
+            else if (isPaused) st.innerText = '⏸️ Game Paused';
+            else st.innerText = i === curP ? '🎲 Active Turn' : 'Waiting...';
         }
-        if (i !== curP) {
-            const tf = document.getElementById('timer-' + i);
-            if (tf) tf.style.width = '0%';
-        }
+        if (i !== curP && document.getElementById('timer-' + i)) document.getElementById('timer-' + i).style.width = '0%';
     }
     document.getElementById('turnIndicator').innerText = isPaused ? '⏸️ PAUSED' : (PALETTE[curP].name + "'S TURN");
     document.getElementById('rollBtn').disabled = isPaused || isGameOver || !isMyTurn() || waitingForMove;
@@ -2076,68 +1651,39 @@ function refreshHUD() {
 
 setInterval(() => {
     if (isAnimating || isPaused || isGameOver) return;
-    const curP = activePlayers[turnIndex];
-    turnTimerPct = Math.max(0, turnTimerPct - 1.5);
-    const bar = document.getElementById('timer-' + curP);
-    if (bar) bar.style.width = turnTimerPct + '%';
+    const curP = activePlayers[turnIndex]; turnTimerPct = Math.max(0, turnTimerPct - 1.5);
+    const bar = document.getElementById('timer-' + curP); if (bar) bar.style.width = turnTimerPct + '%';
 }, 200);
 
 canvas.addEventListener('mousemove', (e) => {
-    if (isPaused || isGameOver || !waitingForMove || isAnimating || !isMyTurn()) {
-        hoveredPawn = null;
-        return;
-    }
-    const rect = canvas.getBoundingClientRect();
-    const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
-    const my = (e.clientY - rect.top) * (canvas.height / rect.height);
-    const curP = activePlayers[turnIndex];
-    const movables = tokens.filter(t => t.player === curP && canPawnMove(t, currentDice));
-
+    if (isPaused || isGameOver || !waitingForMove || isAnimating || !isMyTurn()) { hoveredPawn = null; return; }
+    const rect = canvas.getBoundingClientRect(), mx = (e.clientX - rect.left) * (canvas.width / rect.width), my = (e.clientY - rect.top) * (canvas.height / rect.height);
     hoveredPawn = null;
-    for (const tk of movables) {
-        const tx = (tk.visC + 0.5) * TILE;
-        const ty = (tk.visR + 0.5) * TILE;
-        if (Math.hypot(mx - tx, my - ty) < 26) {
-            hoveredPawn = tk;
-            break;
-        }
+    for (const tk of tokens.filter(t => t.player === activePlayers[turnIndex] && canPawnMove(t, currentDice))) {
+        if (Math.hypot(mx - (tk.visC + 0.5) * TILE, my - (tk.visR + 0.5) * TILE) < 26) { hoveredPawn = tk; break; }
     }
 });
 
 canvas.addEventListener('click', (e) => {
     if (isPaused || isGameOver || !waitingForMove || isAnimating || !isMyTurn()) return;
-    const rect = canvas.getBoundingClientRect();
-    const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
-    const my = (e.clientY - rect.top) * (canvas.height / rect.height);
-
-    const curP = activePlayers[turnIndex];
-    const movables = tokens.filter(t => t.player === curP && canPawnMove(t, currentDice));
-
-    for (const tk of movables) {
-        const tx = (tk.visC + 0.5) * TILE;
-        const ty = (tk.visR + 0.5) * TILE;
-        if (Math.hypot(mx - tx, my - ty) < 26) {
-            if (gameMode === 'ONLINE') {
-                socket.emit('onlineMove', { roomCode: currentRoomCode, player: tk.player, id: tk.id, steps: currentDice });
-            } else {
-                movePawnAnimated(tk, currentDice);
-            }
+    const rect = canvas.getBoundingClientRect(), mx = (e.clientX - rect.left) * (canvas.width / rect.width), my = (e.clientY - rect.top) * (canvas.height / rect.height);
+    for (const tk of tokens.filter(t => t.player === activePlayers[turnIndex] && canPawnMove(t, currentDice))) {
+        if (Math.hypot(mx - (tk.visC + 0.5) * TILE, my - (tk.visR + 0.5) * TILE) < 26) {
+            if (gameMode === 'ONLINE' && socket) socket.emit('onlineMove', { roomCode: currentRoomCode, player: tk.player, id: tk.id, steps: currentDice });
+            else movePawnAnimated(tk, currentDice);
             break;
         }
     }
 });
 
 window.addEventListener('keydown', (e) => {
-    if (e.code === 'Space') {
-        e.preventDefault();
-        triggerRoll();
-    } else if (e.code === 'KeyP') {
-        e.preventDefault();
-        togglePauseGame();
-    }
+    if (e.code === 'Space') { e.preventDefault(); triggerRoll(); } else if (e.code === 'KeyP') { e.preventDefault(); togglePauseGame(); }
 });
 
-const socket = io();
+// ============================================================================
+// VERCEL / MULTIPLAYER SAFETY PATCH 
+// ============================================================================
+let socket = null;
 let currentRoomCode = null;
 let localPlayerIndex = 0;
 
@@ -2149,60 +1695,53 @@ function changeMode(m) {
     document.getElementById('name-2').innerText = m === 'BOT' ? 'SAVAGE BOT' : 'YELLOW KING';
 
     if (m === 'BOT') {
-        document.getElementById('gameModeBadge').innerText = '1V1 SAVAGE BOT';
-        activePlayers = [0, 2];
+        document.getElementById('gameModeBadge').innerText = '1V1 SAVAGE BOT'; activePlayers = [0, 2];
     } else if (m === 'PASS') {
-        document.getElementById('gameModeBadge').innerText = '4P SOLO (TOP 3 WIN)';
-        activePlayers = [0, 1, 2, 3];
+        document.getElementById('gameModeBadge').innerText = '4P SOLO (TOP 3 WIN)'; activePlayers = [0, 1, 2, 3];
     } else if (m === 'TEAM') {
-        document.getElementById('gameModeBadge').innerText = '2V2 TEAM BATTLE';
-        activePlayers = [0, 1, 2, 3];
+        document.getElementById('gameModeBadge').innerText = '2V2 TEAM BATTLE'; activePlayers = [0, 1, 2, 3];
     }
     initTokens();
 }
 
-function createRoom() { socket.emit('createRoom'); }
+function createRoom() {
+    if (!socket) return alert("Vercel-এ মাল্টিপ্লেয়ার সাপোর্ট করে না! অনলাইনে বন্ধুদের সাথে খেলতে গেমটি Render.com-এ হোস্ট করো।");
+    socket.emit('createRoom');
+}
 function joinRoom() {
+    if (!socket) return alert("Vercel-এ মাল্টিপ্লেয়ার সাপোর্ট করে না! Render.com ব্যবহার করো।");
     const code = document.getElementById('roomInp').value;
     if (code) socket.emit('joinRoom', { roomCode: code });
 }
 
-socket.on('roomCreated', ({ roomCode, playerIndex }) => {
-    gameMode = 'ONLINE';
-    currentRoomCode = roomCode;
-    localPlayerIndex = playerIndex;
-    document.getElementById('gameModeBadge').innerText = 'ROOM: ' + roomCode;
-    document.getElementById('roomMsg').innerText = 'Room Code: ' + roomCode + ' (অন্য ট্যাবে বা বন্ধুকে Join করতে বলো)';
-});
-
-socket.on('roomJoined', ({ roomCode, playerIndex }) => {
-    gameMode = 'ONLINE';
-    currentRoomCode = roomCode;
-    localPlayerIndex = playerIndex;
-    document.getElementById('gameModeBadge').innerText = 'ROOM: ' + roomCode;
-});
-
-socket.on('startOnlineGame', ({ roomCode }) => {
-    activePlayers = [0, 2];
-    initTokens();
-    document.getElementById('roomMsg').innerText = 'Live Match Started in Room ' + roomCode + '!';
-});
-
-socket.on('onlineDiceRolled', ({ diceVal }) => runDiceAnimation(diceVal));
-socket.on('onlineTokenMoved', ({ player, id, steps }) => {
-    const tk = tokens.find(t => t.player === player && t.id === id);
-    if (tk) movePawnAnimated(tk, steps);
-});
-socket.on('receiveTaunt', ({ key, speaker }) => {
-    playViralMemePack(key, speaker || 2, true);
-});
-socket.on('receivePause', ({ isPaused: netPaused }) => {
-    if (isPaused !== netPaused) togglePauseGame(true);
-});
-socket.on('receiveNewMatch', () => {
-    startNewMatch(true);
-});
-socket.on('roomError', msg => document.getElementById('roomMsg').innerText = msg);
+// সেফটি-চেক: Vercel-এ socket.io লোড না হলেও গেম অফলাইনে পারফেক্টলি চলবে
+if (typeof io !== 'undefined') {
+    socket = io();
+    socket.on('roomCreated', ({ roomCode, playerIndex }) => {
+        gameMode = 'ONLINE'; currentRoomCode = roomCode; localPlayerIndex = playerIndex;
+        document.getElementById('gameModeBadge').innerText = 'ROOM: ' + roomCode;
+        document.getElementById('roomMsg').innerText = 'Room Code: ' + roomCode + ' (বন্ধুকে Join করতে বলো)';
+    });
+    socket.on('roomJoined', ({ roomCode, playerIndex }) => {
+        gameMode = 'ONLINE'; currentRoomCode = roomCode; localPlayerIndex = playerIndex;
+        document.getElementById('gameModeBadge').innerText = 'ROOM: ' + roomCode;
+    });
+    socket.on('startOnlineGame', ({ roomCode }) => {
+        activePlayers = [0, 2]; initTokens();
+        document.getElementById('roomMsg').innerText = 'Live Match Started in Room ' + roomCode + '!';
+    });
+    socket.on('onlineDiceRolled', ({ diceVal }) => runDiceAnimation(diceVal));
+    socket.on('onlineTokenMoved', ({ player, id, steps }) => {
+        const tk = tokens.find(t => t.player === player && t.id === id);
+        if (tk) movePawnAnimated(tk, steps);
+    });
+    socket.on('receiveTaunt', ({ key, speaker }) => playViralMemePack(key, speaker || 2, true));
+    socket.on('receivePause', ({ isPaused: netPaused }) => { if (isPaused !== netPaused) togglePauseGame(true); });
+    socket.on('receiveNewMatch', () => startNewMatch(true));
+    socket.on('roomError', msg => document.getElementById('roomMsg').innerText = msg);
+} else {
+    console.warn("Vercel Serverless Mode: Multiplayer is disabled, playing OFFLINE successfully.");
+}
 
 initTokens();
 requestAnimationFrame(renderGameCanvas);
@@ -2212,18 +1751,13 @@ requestAnimationFrame(renderGameCanvas);
 
 app.get('/', (req, res) => res.send(GAME_HTML));
 
-// ============================================================================
-// 4. CLOUD-READY SERVER LAUNCHER (WORKS ON RENDER, VERCEL, AND LOCAL MAC)
-// ============================================================================
 const PORT = process.env.PORT || 3000;
-
 if (!process.env.VERCEL) {
     server.listen(PORT, () => {
         const url = 'http://localhost:' + PORT;
         console.log('====================================================');
         console.log('👑 LUDO STAR ROYAL 3D (CLOUD READY EDITION): ' + url);
         console.log('====================================================');
-        // Only auto-open browser when running locally on macOS
         if (!process.env.PORT && process.platform === 'darwin') {
             exec('open ' + url);
         }
